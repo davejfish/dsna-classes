@@ -25,6 +25,22 @@ class Stack {
   }
 }
 
-class Queue {}
+class Queue {
+
+  #array;
+
+  constructor(array) {
+    this.#array = array;
+  }
+  enqueue(prop) {
+    //takes an item and add it to the Queue
+    this.#array.push(prop);
+
+  }
+
+  get array() {
+    return this.#array
+  }
+}
 
 module.exports = { Stack, Queue };
