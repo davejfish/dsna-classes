@@ -2,7 +2,7 @@ class Stack {
   #list;
 
   constructor(list) {
-    this.#list = list;
+    this.#list = list || [];
   }
 
   push(prop) {
