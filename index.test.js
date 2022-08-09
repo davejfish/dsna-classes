@@ -15,7 +15,16 @@ describe("Stack Class", () => {
 
   it('#peek should return the last item in the list array', () => {
     const stack = new Stack(['apples', 'oranges', 'pears']);
-    console.log('here is the peek value', stack.peek())
     expect(stack.peek()).toEqual('pears');
+  });
+
+  it('lets pop a bunch of items', () => {
+    const stack = new Stack(['apples', 'oranges', 'pears']);
+    stack.pop();
+    stack.pop();
+    expect(stack.peek()).toEqual('apples');
+
+    stack.push('cherries');
+    expect(stack.peek()).toEqual('cherries');
   });
 });

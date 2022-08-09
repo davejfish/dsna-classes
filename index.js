@@ -1,5 +1,5 @@
 class Stack {
-  #list = [];
+  #list;
 
   constructor(list) {
     this.#list = list;
