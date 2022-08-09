@@ -45,10 +45,5 @@ describe("Stack Queue Classes", () => {
     expect(item).toEqual('apples');
     expect(queue.hasNext()).toEqual(false);
   });
-
-  // it('#hasNext returns true if index 0 exists, false if not', () => {
-  //   const queue = new Queue();
-
-  // })
   
 });
