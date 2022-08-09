@@ -30,12 +30,19 @@ class Queue {
   #array;
 
   constructor(array) {
-    this.#array = array;
+    this.#array = array || [];
   }
   enqueue(prop) {
     //takes an item and add it to the Queue
     this.#array.push(prop);
+  }
 
+  dequeue() {
+    return this.#array.shift()
+  }
+
+  hasNext() {
+    return this.#array[0] ? true : false;
   }
 
   get array() {
