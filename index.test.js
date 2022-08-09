@@ -37,9 +37,18 @@ describe("Stack Queue Classes", () => {
   it('#dequeue removes an item from the first index of the array', () => {
     const queue = new Queue();
     expect(queue.hasNext()).toEqual(false);
-    
+
     queue.enqueue('apples');
     expect(queue.hasNext()).toEqual(true);
+
+    const item = queue.dequeue();
+    expect(item).toEqual('apples');
+    expect(queue.hasNext()).toEqual(false);
   });
+
+  // it('#hasNext returns true if index 0 exists, false if not', () => {
+  //   const queue = new Queue();
+
+  // })
   
 });
